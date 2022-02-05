@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <title>Parallax Scrolling | Vanilla Javascript</title>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li>
+                <a href="#" class="active">Home</a>
+                <a href="#">About</a>
+                <a href="#">Work</a>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <section>
+        <img src="img/stars.png" id="stars">
+        <img src="img/moon.png" id="moon">
+        <img src="img/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Exploer</a>
+        <img src="img/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>A cup of tea (by Katherine Mansfield) - английский текст со сложной лексикой
+            A Custom House Incident (by Nigel Balchin) - английский текст со сложной лексикой
+            A deal of paint (by Elizabeth Ayrton) - английский текст со сложной лексикой
+            A future businessman (from "The Financier" by Theodore Dreiser) - английский текст со сложной лексикой
+            A Good Lesson - английский текст со сложной лексикой
+            A piece of advice (by W.S. Maugham) - английский текст со сложной лексикой
+            A piece of soap (after H. Munro) - английский текст со сложной лексикой
+            A Stockbroker is an Honorable Business - английский текст со сложной лексикой
+            At the restaurant (from "A Thing of Beauty" by A. J. Cronin) - английский текст со сложной лексикой
+            Bill's eyes (by William March) - английский текст со сложной лексикой
+            Do We Need Meat? - английский текст со сложной лексикой
+            Doc Marlowe (by James Thurber) - английский текст со сложной лексикой
+            Glamorous but Laborious - английский текст со сложной лексикой
+            He overdid it (From the story "The Rathskeller and the Rose" by O. Henry) - английский текст со сложной лексикой
+            How the USA Constitution Began - английский текст со сложной лексикой.<br><br>A cup of tea (by Katherine Mansfield) - английский текст со сложной лексикой
+            A Custom House Incident (by Nigel Balchin) - английский текст со сложной лексикой
+            A deal of paint (by Elizabeth Ayrton) - английский текст со сложной лексикой
+            A future businessman (from "The Financier" by Theodore Dreiser) - английский текст со сложной лексикой
+            A Good Lesson - английский текст со сложной лексикой
+            A piece of advice (by W.S. Maugham) - английский текст со сложной лексикой
+            A piece of soap (after H. Munro) - английский текст со сложной лексикой
+            A Stockbroker is an Honorable Business - английский текст со сложной лексикой
+            At the restaurant (from "A Thing of Beauty" by A. J. Cronin) - английский текст со сложной лексикой
+            Bill's eyes (by William March) - английский текст со сложной лексикой
+            Do We Need Meat? - английский текст со сложной лексикой
+            Doc Marlowe (by James Thurber) - английский текст со сложной лексикой
+            Glamorous but Laborious - английский текст со сложной лексикой
+            He overdid it (From the story "The Rathskeller and the Rose" by O. Henry) - английский текст со сложной лексикой
+            How the USA Constitution Began - английский текст со сложной лексикой<br><br>A cup of tea (by Katherine Mansfield) - английский текст со сложной лексикой
+            A Custom House Incident (by Nigel Balchin) - английский текст со сложной лексикой
+            A deal of paint (by Elizabeth Ayrton) - английский текст со сложной лексикой
+            A future businessman (from "The Financier" by Theodore Dreiser) - английский текст со сложной лексикой
+            A Good Lesson - английский текст со сложной лексикой
+            A piece of advice (by W.S. Maugham) - английский текст со сложной лексикой
+            A piece of soap (after H. Munro) - английский текст со сложной лексикой
+            A Stockbroker is an Honorable Business - английский текст со сложной лексикой
+            At the restaurant (from "A Thing of Beauty" by A. J. Cronin) - английский текст со сложной лексикой
+            Bill's eyes (by William March) - английский текст со сложной лексикой
+            Do We Need Meat? - английский текст со сложной лексикой
+            Doc Marlowe (by James Thurber) - английский текст со сложной лексикой
+            Glamorous but Laborious - английский текст со сложной лексикой
+            He overdid it (From the story "The Rathskeller and the Rose" by O. Henry) - английский текст со сложной лексикой
+            How the USA Constitution Began - английский текст со сложной лексикой</p>
+
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars'); 
+        let moon = document.getElementById('moon'); 
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let smountains_front = document.getElementById('mountains_front'); 
+        
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            
+        })
+    </script>
+</body>
+
+</html>
